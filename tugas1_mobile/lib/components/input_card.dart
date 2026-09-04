@@ -21,10 +21,10 @@ class InputCardComponent extends StatelessWidget {
       children: [
         Text(
           label,
-          style: AppTextStyles.jostRegular.copyWith(
-            fontSize: 14,
+          style: AppTextStyles.poppinsBold.copyWith(
+            fontSize: 16,
             fontWeight: FontWeight.bold,
-            color: AppColors.primaryColor,
+            color: AppColors.secondaryColor,
           ),
         ),
 
@@ -32,23 +32,27 @@ class InputCardComponent extends StatelessWidget {
 
         TextField(
           controller: controller,
+          style: AppTextStyles.jostRegular.copyWith(
+            fontSize: 14,
+            color: AppColors.secondaryColor,
+          ),
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: AppTextStyles.jostRegular.copyWith(
               fontSize: 13,
-              color: AppColors.primaryColor,
+              color: AppColors.secondaryColor,
             ),
             filled: false,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
               borderSide: BorderSide(
-                color: AppColors.primaryColor,
+                color: AppColors.secondaryColor,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
               borderSide: BorderSide(
-                color: AppColors.primaryColor,
+                color: AppColors.secondaryColor,
                 width: 2,
               ),
             ),
