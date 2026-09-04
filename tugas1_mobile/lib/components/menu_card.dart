@@ -26,7 +26,7 @@ class MenuCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
         side: const BorderSide(
-          color: Colors.black,
+          color: AppColors.textColor,
         ),
       ),
       child: Padding(
