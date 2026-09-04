@@ -35,14 +35,10 @@ class InputCardComponent extends StatelessWidget {
         // Kolom input
         TextField(
           controller: controller,
-<<<<<<< HEAD
-          keyboardType: TextInputType.number,
-=======
           style: AppTextStyles.jostRegular.copyWith(
             fontSize: 14,
             color: AppColors.secondaryColor,
           ),
->>>>>>> d1573f0b70442d0e65d8779c7e3c361e4d0f6cf9
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: AppTextStyles.jostRegular.copyWith(
@@ -56,26 +52,16 @@ class InputCardComponent extends StatelessWidget {
             // Border ketika tidak dipilih
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-<<<<<<< HEAD
-              borderSide: const BorderSide(
-                color: AppColors.primaryColor,
-=======
               borderSide: BorderSide(
                 color: AppColors.secondaryColor,
->>>>>>> d1573f0b70442d0e65d8779c7e3c361e4d0f6cf9
               ),
             ),
 
             // Border ketika sedang dipilih
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-<<<<<<< HEAD
-              borderSide: const BorderSide(
-                color: AppColors.primaryColor,
-=======
               borderSide: BorderSide(
                 color: AppColors.secondaryColor,
->>>>>>> d1573f0b70442d0e65d8779c7e3c361e4d0f6cf9
                 width: 2,
               ),
             ),
