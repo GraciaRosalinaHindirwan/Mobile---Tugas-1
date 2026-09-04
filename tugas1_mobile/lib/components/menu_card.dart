@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
+import 'package:tugas1_mobile/theme/app_text_styles.dart';
 
 class MenuCard extends StatelessWidget {
   final String title; 
@@ -38,7 +39,8 @@ class MenuCard extends StatelessWidget {
             Expanded(
               child: Text(
                 title,
-                textAlign: TextAlign.right
+                textAlign: TextAlign.right,
+                style: AppTextStyles.jostRegular, 
               ),
             ),
           ],
