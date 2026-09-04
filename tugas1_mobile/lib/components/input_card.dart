@@ -19,6 +19,8 @@ class InputCardComponent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+
+        // Label input
         Text(
           label,
           style: AppTextStyles.jostRegular.copyWith(
@@ -30,28 +32,37 @@ class InputCardComponent extends StatelessWidget {
 
         const SizedBox(height: 8),
 
+        // Kolom input
         TextField(
           controller: controller,
+          keyboardType: TextInputType.number,
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: AppTextStyles.jostRegular.copyWith(
               fontSize: 13,
               color: AppColors.primaryColor,
             ),
+
+            // Tidak ada background
             filled: false,
+
+            // Border ketika tidak dipilih
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.primaryColor,
               ),
             ),
+
+            // Border ketika sedang dipilih
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: AppColors.primaryColor,
                 width: 2,
               ),
             ),
+
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 16,
               vertical: 10,
