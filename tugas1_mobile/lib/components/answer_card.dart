@@ -38,7 +38,7 @@ class AnswerCardComponent extends StatelessWidget{
               children: [
                 Text(
                   answerEntity.question,
-                  style: TextStyle(
+                  style: AppTextStyles.jostRegular.copyWith(
                     fontSize: 14,
                     color: AppColors.primaryColor,
                   ),
@@ -47,7 +47,7 @@ class AnswerCardComponent extends StatelessWidget{
                 const SizedBox(height: 4),
                 Text(
                   answerEntity.answer,
-                  style: TextStyle(
+                  style: AppTextStyles.jostRegular.copyWith(
                     fontSize: 16,
                     color: AppColors.primaryColor,
                     fontWeight: FontWeight.bold,
