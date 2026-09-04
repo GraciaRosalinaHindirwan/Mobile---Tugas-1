@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tugas1_mobile/theme/app_colors.dart';
 
 class MenuCard extends StatelessWidget {
   final String title; 
@@ -21,7 +22,7 @@ class MenuCard extends StatelessWidget {
       );
     },
     child: Card(
-      color: Colors.white,
+      color: AppColors.secondaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
         side: const BorderSide(
