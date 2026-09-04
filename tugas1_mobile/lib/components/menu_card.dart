@@ -40,7 +40,10 @@ class MenuCard extends StatelessWidget {
               child: Text(
                 title,
                 textAlign: TextAlign.right,
-                style: AppTextStyles.jostRegular, 
+                style: AppTextStyles.jostRegular.copyWith(
+                  fontSize: 14,
+                  color: AppColors.textColor,
+                ), 
               ),
             ),
           ],
