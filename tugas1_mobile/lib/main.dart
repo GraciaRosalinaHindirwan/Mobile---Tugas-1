@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: MenuCard(title: "Penjumlahan&Pengurangan", 
+        body: MenuCard(title: "Penjumlahan & Pengurangan", 
         icon: "assets/icons/tambahKurang.png", 
         page: const summaryPage(),)
       ),
