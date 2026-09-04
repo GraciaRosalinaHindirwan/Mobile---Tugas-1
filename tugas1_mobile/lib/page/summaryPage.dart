@@ -7,8 +7,26 @@ import 'package:tugas1_mobile/theme/app_text_styles.dart';
 class summaryPage extends StatelessWidget {
   const summaryPage({super.key});
 
+  List<int> getNumbers(String text){
+    final regex = RegExp(r'\d+'); 
+
+    // regex ini akan nyari satu/lebih dari pola angka. 
+
+    return regex
+    .allMatches(text) //mencari semua bagian yang cocok dengan pola regex 
+    .map((match) => int.parse(match.group(0)!)) //mengubah string angka menjadi int 
+    .toList(); 
+  }
+
+  int getTotal(List<int> numbers){
+    return numbers.fold(0, (sum, number) => sum + number);
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    final numbers = getNumbers("HEL10O 4"); 
+    final total = getTotal(numbers); 
     return Scaffold(
       body: Container( 
         padding:const EdgeInsets.all(32), 
@@ -64,8 +82,8 @@ class summaryPage extends StatelessWidget {
             
 
             // card hasil perhitungan 
-            ResultCard(title: "Total Angka", result: "0"), 
-            ResultCard(title: "Total Penjumlahan", result: "0"),
+            ResultCard(title: "Total Angka", result: numbers.length.toString()), 
+            ResultCard(title: "Total Penjumlahan", result: total.toString()),
           ],
         ),
       ), 
