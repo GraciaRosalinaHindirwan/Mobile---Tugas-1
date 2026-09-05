@@ -12,7 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+<<<<<<< HEAD
       home: const LoginPage(),
+=======
+      home: Scaffold(
+        body: MenuCard(title: "Penjumlahan & Pengurangan", 
+        icon: "assets/icons/tambahKurang.png", 
+        page: const summaryPage(),)
+      ),
+>>>>>>> 25a28f4dcc01bcac9125a75e2b70647fb396b364
     );
   }
 }

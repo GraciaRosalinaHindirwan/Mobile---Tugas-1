@@ -28,8 +28,8 @@ class MenuLayout extends StatelessWidget {
                       },
                       icon: Image.asset(
                         "assets/icons/back.png",
-                        width: 24,
-                        height: 24,
+                        width: 30,
+                        height: 30,
                       ),
                     ),
                   ),
