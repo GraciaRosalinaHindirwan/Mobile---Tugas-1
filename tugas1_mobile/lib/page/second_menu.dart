@@ -106,7 +106,7 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                 spacing: 24,
                 children: [
                   Image.asset(
-                    'assets/icons/kaliBagi.png',
+                    'assets/icons/bigKaliBagi.png',
                     width: 100,
                     height: 100,
                   ),

@@ -17,7 +17,7 @@ class _summaryPageState extends State<summaryPage> {
   int totalSum = 0; 
 
   final TextEditingController controller = TextEditingController();
-
+  
   List<int> getNumbers(String text){
     final regex = RegExp(r'\d+'); 
 

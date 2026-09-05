@@ -46,63 +46,34 @@ class _OddEvenPageState extends State<OddEvenPage> {
   @override
   Widget build(BuildContext context) {
     return MenuLayout(
-      title: 'Input Ganjil & Genap',
-
-      content: Column(
-        children: [
-          // ICON
-          Container(
-            width: 62,
-            height: 62,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: AppColors.secondaryColor, width: 3),
+        title: 'Input Ganjil & Genap',
+        icon: "assets/icons/bigGanjilGenap.png",
+        description: 'Masukkan bilangan bulat, sistem akan menentukan '
+                      'bilangan tersebut termasuk bilangan ganjil atau '
+                      'bilangan genap.',
+        content: Column(
+          children: [
+            const SizedBox(height: 20),
+            // INPUT
+            InputCardComponent(
+              label: 'Masukkan Angka',
+              hint: 'Masukkan bilangan',
+              controller: controller,
             ),
-            child: Center(
-              child: Text(
-                'Σ',
-                style: AppTextStyles.jostBold.copyWith(
-                  fontSize: 24,
-                  color: AppColors.secondaryColor,
-                ),
+
+            const SizedBox(height: 16),
+            // BUTTON
+            SizedBox(
+              width: double.infinity,
+              child: ButtonSubmit(
+                onPressed: cekBilangan,
               ),
             ),
-          ),
-
-          const SizedBox(height: 24),
-          // DESKRIPSI
-          Text(
-            'Masukkan bilangan bulat, sistem akan menentukan '
-            'bilangan tersebut termasuk bilangan ganjil atau '
-            'bilangan genap.',
-            textAlign: TextAlign.center,
-            style: AppTextStyles.jostRegular.copyWith(
-              fontSize: 11,
-              color: AppColors.secondaryColor,
-            ),
-          ),
-
-          const SizedBox(height: 20),
-          // INPUT
-          InputCardComponent(
-            label: 'Masukkan Angka',
-            hint: 'Masukkan bilangan',
-            controller: controller,
-          ),
-
-          const SizedBox(height: 16),
-          // BUTTON
-          SizedBox(
-            width: double.infinity,
-            child: ButtonSubmit(
-              onPressed: cekBilangan,
-            ),
-          ),
-          const SizedBox(height: 16),
-          // OUTPUT
-          OutputCardComponent(question: 'Jawaban', answer: hasil),
-        ],
-      ),
+            const SizedBox(height: 16),
+            // OUTPUT
+            OutputCardComponent(question: 'Jawaban', answer: hasil),
+          ],
+        ),
     );
   }
 }
