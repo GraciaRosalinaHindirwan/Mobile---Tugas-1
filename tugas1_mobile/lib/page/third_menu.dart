@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tugas1_mobile/components/answer_card.dart';
+import 'package:tugas1_mobile/components/input_card.dart';
+import 'package:tugas1_mobile/components/output_card.dart';
+import 'package:tugas1_mobile/layouts/menu_layouts.dart';
+import 'package:tugas1_mobile/theme/app_colors.dart';
+import 'package:tugas1_mobile/theme/app_text_styles.dart';
+import 'package:tugas1_mobile/components/button_submit.dart';
 
 class OddEvenPage extends StatefulWidget {
   const OddEvenPage({super.key});
@@ -40,48 +45,63 @@ class _OddEvenPageState extends State<OddEvenPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Input Ganjil & Genap'),
-      ),
+    return MenuLayout(
+      title: 'Input Ganjil & Genap',
 
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-
-        child: Column(
-          children: [
-            TextField(
-              controller: controller,
-              keyboardType: TextInputType.number,
-
-              decoration: const InputDecoration(
-                labelText: 'Masukkan bilangan',
-                hintText: 'Contoh: 17',
-                border: OutlineInputBorder(),
+      content: Column(
+        children: [
+          // ICON
+          Container(
+            width: 62,
+            height: 62,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: AppColors.secondaryColor, width: 3),
+            ),
+            child: Center(
+              child: Text(
+                'Σ',
+                style: AppTextStyles.jostBold.copyWith(
+                  fontSize: 24,
+                  color: AppColors.secondaryColor,
+                ),
               ),
             ),
+          ),
 
-            const SizedBox(height: 16),
-
-            SizedBox(
-              width: double.infinity,
-
-              child: FilledButton(
-                onPressed: cekBilangan,
-                child: const Text('JALANKAN'),
-              ),
+          const SizedBox(height: 24),
+          // DESKRIPSI
+          Text(
+            'Masukkan bilangan bulat, sistem akan menentukan '
+            'bilangan tersebut termasuk bilangan ganjil atau '
+            'bilangan genap.',
+            textAlign: TextAlign.center,
+            style: AppTextStyles.jostRegular.copyWith(
+              fontSize: 11,
+              color: AppColors.secondaryColor,
             ),
+          ),
 
-            const SizedBox(height: 24),
+          const SizedBox(height: 20),
+          // INPUT
+          InputCardComponent(
+            label: 'Masukkan Angka',
+            hint: 'Masukkan bilangan',
+            controller: controller,
+          ),
 
-            AnswerCardComponent(
-              answerEntity: AnswerEntity(
-                question: 'Jawaban',
-                answer: hasil,
-              ),
+          const SizedBox(height: 16),
+          // BUTTON
+          SizedBox(
+            width: double.infinity,
+            child: ButtonSubmit(
+              onPressed: cekBilangan,
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 16),
+          // OUTPUT
+          OutputCardComponent(question: 'Jawaban', answer: hasil),
+        ],
       ),
     );
   }
