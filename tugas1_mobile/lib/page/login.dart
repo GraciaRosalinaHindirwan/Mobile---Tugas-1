@@ -133,8 +133,8 @@ class _LoginPageState extends State<LoginPage> {
                         // USERNAME
                         InputCardComponent(
                           label: 'Username',
-                          hint: 'Masukkan username',
-                          controller: _usernameController,
+                          controller: _usernameController, 
+                          hint: '',
                         ),
 
                         const SizedBox(height: 12),
@@ -142,8 +142,8 @@ class _LoginPageState extends State<LoginPage> {
                         // PASSWORD
                         InputCardComponent(
                           label: 'Password',
-                          hint: 'Masukkan password',
-                          controller: _passwordController,
+                          controller: _passwordController, 
+                          hint: '',
                         ),
 
                         const SizedBox(height: 65),
