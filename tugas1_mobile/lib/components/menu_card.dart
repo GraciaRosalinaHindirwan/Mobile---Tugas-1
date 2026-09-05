@@ -31,10 +31,10 @@ class MenuCard extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(14),
         child: Row(
           children:[
-            Image.asset(icon),
+            Image.asset(icon, width: 50, height: 50,),
             const SizedBox(width: 16),
             Expanded(
               child: Text(

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
+import 'package:tugas1_mobile/layouts/dashboard_layouts.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
-import 'package:tugas1_mobile/page/menu_page.dart';
+import 'package:tugas1_mobile/page/dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
     if (username == "pakgood" && password == "gusbar1234") {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MenuPage()),
+        MaterialPageRoute(builder: (context) => const DashboardPage()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
