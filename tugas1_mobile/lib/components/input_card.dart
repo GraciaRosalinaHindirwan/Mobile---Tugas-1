@@ -6,12 +6,14 @@ class InputCardComponent extends StatelessWidget {
   final String label;
   final String hint;
   final TextEditingController controller;
+  final bool obscureText;
 
   const InputCardComponent({
     super.key,
     required this.label,
     required this.hint,
     required this.controller,
+    this.obscureText = false,
   });
 
   @override
@@ -35,6 +37,7 @@ class InputCardComponent extends StatelessWidget {
         // Kolom input
         TextField(
           controller: controller,
+          obscureText: obscureText,
           style: AppTextStyles.jostRegular.copyWith(
             fontSize: 14,
             color: AppColors.secondaryColor,

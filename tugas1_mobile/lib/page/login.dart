@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
-import 'package:tugas1_mobile/layouts/dashboard_layouts.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 import 'package:tugas1_mobile/page/dashboard.dart';
@@ -134,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                         // USERNAME
                         InputCardComponent(
                           label: 'Username',
-                          controller: _usernameController, 
+                          controller: _usernameController,
                           hint: '',
                         ),
 
@@ -143,8 +142,9 @@ class _LoginPageState extends State<LoginPage> {
                         // PASSWORD
                         InputCardComponent(
                           label: 'Password',
-                          controller: _passwordController, 
+                          controller: _passwordController,
                           hint: '',
+                          obscureText: true,
                         ),
 
                         const SizedBox(height: 65),
