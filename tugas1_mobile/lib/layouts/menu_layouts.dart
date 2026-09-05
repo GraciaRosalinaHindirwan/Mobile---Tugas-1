@@ -10,29 +10,35 @@ class MenuLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
               const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Stack(
+                alignment: Alignment.center,
                 children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Icon(
-                      Icons.arrow_back,
-                      color: AppColors.primaryColor,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Image.asset(
+                        "assets/icons/back.png",
+                        width: 24,
+                        height: 24,
+                      ),
                     ),
                   ),
                   Text(
                     title,
+                    textAlign: TextAlign.center,
                     style: AppTextStyles.poppinsBold.copyWith(
-                      fontSize: 32,
-                      color: AppColors.primaryColor,
+                      fontSize: 24,
+                      color: AppColors.secondaryColor,
                     ),
                   ),
                 ],
