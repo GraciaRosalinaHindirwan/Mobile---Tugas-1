@@ -139,13 +139,41 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                 spacing: 16,
                 children: [
                   Expanded(
-                    child: ButtonSubmit(
+                    child: ElevatedButton(
                       onPressed: hitungPerkalian,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.secondaryColor,
+                        foregroundColor: AppColors.primaryColor,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                      ),
+                      child: Text(
+                        '× Perkalian',
+                        style: AppTextStyles.poppinsBold.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ),
                   Expanded(
-                    child: ButtonSubmit(
+                    child: ElevatedButton(
                       onPressed: hitungPembagian,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.secondaryColor,
+                        foregroundColor: AppColors.primaryColor,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                      ),
+                      child: Text(
+                        '÷ Pembagian',
+                        style: AppTextStyles.poppinsBold.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ),
                 ],
