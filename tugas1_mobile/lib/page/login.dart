@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
     String username = _usernameController.text;
     String password = _passwordController.text;
 
-    if (username == "pakgood" && password == "gusbar1234") {
+    if (username == "mobileSeru" && password == "mobileSeru") {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const DashboardPage()),

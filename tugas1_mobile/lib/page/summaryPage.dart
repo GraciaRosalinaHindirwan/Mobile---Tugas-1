@@ -41,6 +41,7 @@ class _summaryPageState extends State<summaryPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       body: Container( 
         padding:const EdgeInsets.all(32), 
         color: AppColors.primaryColor,
@@ -76,7 +77,7 @@ class _summaryPageState extends State<summaryPage> {
             Column(
               spacing: 24, 
               children: [
-                Image.asset('assets/icons/Bigsum.png', 
+                Image.asset('assets/icons/bigSum.png', 
                 width: 100, 
                 height: 100,),
 

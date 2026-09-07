@@ -69,6 +69,7 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       body: Container(
         padding: const EdgeInsets.all(32),
         color: AppColors.primaryColor,
