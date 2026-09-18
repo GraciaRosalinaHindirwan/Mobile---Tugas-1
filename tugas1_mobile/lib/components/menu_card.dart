@@ -34,12 +34,13 @@ class MenuCard extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         child: Row(
           children:[
-            Image.asset(icon, width: 50, height: 50,),
+            Image.asset(icon, width: 35,),
             const SizedBox(width: 16),
             Expanded(
               child: Text(
                 title,
                 textAlign: TextAlign.right,
+                softWrap: true,
                 style: AppTextStyles.jostRegular.copyWith(
                   fontSize: 14,
                   color: AppColors.textColor,

@@ -69,6 +69,7 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       body: Container(
         padding: const EdgeInsets.all(32),
         color: AppColors.primaryColor,
@@ -139,15 +140,51 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                 spacing: 16,
                 children: [
                   Expanded(
+<<<<<<< HEAD
                     child: ButtonSubmit(
                       label: "Kalikan",
+=======
+                    child: ElevatedButton(
+>>>>>>> c821633043b897ad5fb40d300327515e79b40afc
                       onPressed: hitungPerkalian,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.secondaryColor,
+                        foregroundColor: AppColors.primaryColor,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                      ),
+                      child: Text(
+                        '× Perkalian',
+                        style: AppTextStyles.poppinsBold.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ),
                   Expanded(
+<<<<<<< HEAD
                     child: ButtonSubmit(
                       label: "Bagi",
+=======
+                    child: ElevatedButton(
+>>>>>>> c821633043b897ad5fb40d300327515e79b40afc
                       onPressed: hitungPembagian,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.secondaryColor,
+                        foregroundColor: AppColors.primaryColor,
+                        minimumSize: const Size(double.infinity, 50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                      ),
+                      child: Text(
+                        '÷ Pembagian',
+                        style: AppTextStyles.poppinsBold.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ),
                 ],

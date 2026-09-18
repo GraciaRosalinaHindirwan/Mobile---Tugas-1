@@ -21,21 +21,23 @@ class DashboardLayout extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(32),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              welcomeCard,
-              const SizedBox(height: 10),
-              Text(
-                menuLabel,
-                style: AppTextStyles.poppinsBold.copyWith(
-                  fontSize: 20,
-                  color: AppColors.secondaryColor,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                welcomeCard,
+                const SizedBox(height: 10),
+                Text(
+                  menuLabel,
+                  style: AppTextStyles.poppinsBold.copyWith(
+                    fontSize: 20,
+                    color: AppColors.secondaryColor,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 10),
-              content,
-            ],
+                const SizedBox(height: 10),
+                content,
+              ],
+            ),
           ),
         ),
       ),
