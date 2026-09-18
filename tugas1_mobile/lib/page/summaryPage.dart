@@ -17,6 +17,11 @@ class _summaryPageState extends State<summaryPage> {
   int totalSum = 0; 
 
   final TextEditingController controller = TextEditingController();
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
   
   List<int> getNumbers(String text){
     final regex = RegExp(r'\d+'); 
