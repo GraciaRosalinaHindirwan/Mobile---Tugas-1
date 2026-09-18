@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/layouts/dashboard_layouts.dart';
 import 'package:tugas1_mobile/components/menu_card.dart';
+import 'package:tugas1_mobile/page/hijriyah.dart';
 import 'package:tugas1_mobile/page/summaryPage.dart';
 import 'package:tugas1_mobile/page/first_menu.dart';
 import 'package:tugas1_mobile/page/second_menu.dart';
@@ -30,7 +31,8 @@ class DashboardPage extends StatelessWidget {
           MenuCard(title: "Kali & Bagi", icon: "assets/icons/kaliBagi.png", page: const SecondMenuPage()), 
           MenuCard(title: "Input Ganjil & Genap", icon: "assets/icons/ganjilGenap.png", page: const OddEvenPage()), 
           MenuCard(title: "Total Field Angka", icon: "assets/icons/sum.png", page: const summaryPage()), 
-          MenuCard(title: "Konversi Weton", icon: "assets/icons/weton_small.png", page: const Weton())
+          MenuCard(title: "Konversi Weton", icon: "assets/icons/weton_small.png", page: const Weton()),
+          MenuCard(title: "Kalender Hijriyah", icon: "assets/icons/hijri_smal.png", page: const Hijriyah())
         ],
 
       ),
