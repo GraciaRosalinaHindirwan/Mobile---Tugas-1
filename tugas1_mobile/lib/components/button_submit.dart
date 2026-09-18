@@ -3,16 +3,19 @@ import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 
 class ButtonSubmit extends StatelessWidget {
-  final VoidCallback onPressed; 
+  final VoidCallback onPressed;
+  final String label;
+
   const ButtonSubmit({
-    super.key, 
-    required this.onPressed
+    super.key,
+    required this.onPressed,
+    this.label = 'Jalankan',
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity, 
+      width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -23,17 +26,17 @@ class ButtonSubmit extends StatelessWidget {
           ),
           side: const BorderSide(
             color: AppColors.secondaryColor,
-            width: 1, 
+            width: 1,
           ),
-        ), 
+        ),
         child: Text(
-          'Jalankan',
+          label,
           style: AppTextStyles.poppinsBold.copyWith(
             fontSize: 20,
             color: AppColors.primaryColor,
           ),
         ),
       ),
-    ); 
+    );
   }
 }

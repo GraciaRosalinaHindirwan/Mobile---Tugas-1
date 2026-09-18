@@ -140,11 +140,13 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                 children: [
                   Expanded(
                     child: ButtonSubmit(
+                      label: "Kalikan",
                       onPressed: hitungPerkalian,
                     ),
                   ),
                   Expanded(
                     child: ButtonSubmit(
+                      label: "Bagi",
                       onPressed: hitungPembagian,
                     ),
                   ),
