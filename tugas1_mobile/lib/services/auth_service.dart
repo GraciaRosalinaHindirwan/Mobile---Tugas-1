@@ -156,6 +156,14 @@ class AuthService {
     return true;
   }
 
+  static Future<bool> isLoggedIn() async {
+    final box = await _box;
+
+    final username = box.get('loggedInUsername');
+
+    return username != null;
+  }
+
   static Future<bool> logout() async {
     final box = await _box;
 
