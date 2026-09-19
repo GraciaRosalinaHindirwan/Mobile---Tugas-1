@@ -140,12 +140,7 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                 spacing: 16,
                 children: [
                   Expanded(
-<<<<<<< HEAD
-                    child: ButtonSubmit(
-                      label: "Kalikan",
-=======
                     child: ElevatedButton(
->>>>>>> c821633043b897ad5fb40d300327515e79b40afc
                       onPressed: hitungPerkalian,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.secondaryColor,
@@ -164,12 +159,7 @@ class _SecondMenuPageState extends State<SecondMenuPage> {
                     ),
                   ),
                   Expanded(
-<<<<<<< HEAD
-                    child: ButtonSubmit(
-                      label: "Bagi",
-=======
                     child: ElevatedButton(
->>>>>>> c821633043b897ad5fb40d300327515e79b40afc
                       onPressed: hitungPembagian,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.secondaryColor,
