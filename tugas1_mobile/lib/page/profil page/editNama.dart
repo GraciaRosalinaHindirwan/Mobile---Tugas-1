@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/layouts/editPage_layouts.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
 import 'package:tugas1_mobile/components/button_save.dart';
+import 'package:tugas1_mobile/services/auth_service.dart';
 
 class Editnama extends StatefulWidget {
   
@@ -22,7 +23,11 @@ class _EditnamaState extends State<Editnama> {
         spacing: 24,
         children: [
           InputCardComponent(label: "Nama Anda", hint: '', controller: controller),
-          ButtonSave(onPressed: (){}), 
+          ButtonSave(onPressed: () async {
+            await AuthService.changeName(controller.text);
+            
+            Navigator.pop(context);
+          }), 
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
 import 'package:tugas1_mobile/page/register.dart';
+import 'package:tugas1_mobile/services/auth_service.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 import 'package:tugas1_mobile/page/dashboard.dart';
@@ -18,11 +19,13 @@ class _LoginPageState extends State<LoginPage> {
 
   final TextEditingController _passwordController = TextEditingController();
 
-  void _loginAction() {
+  Future<void> _loginAction() async {
     String username = _usernameController.text;
     String password = _passwordController.text;
 
-    if (username == "mobileSeru" && password == "mobileSeru") {
+    bool loginResult = await AuthService.login(username, password);
+
+    if (loginResult) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const DashboardPage()),

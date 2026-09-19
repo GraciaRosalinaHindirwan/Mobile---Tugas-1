@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
+import 'package:tugas1_mobile/page/login.dart';
+import 'package:tugas1_mobile/services/auth_service.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 import 'package:tugas1_mobile/page/dashboard.dart';
@@ -18,16 +20,18 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _emailController = TextEditingController(); 
   final TextEditingController _confirmPasswordController = TextEditingController(); 
 
-  void _registerAction() {
+  Future<void> _registerAction() async {
     String nama = _namaController.text; 
     String email = _emailController.text; 
     String username = _usernameController.text;
     String password = _passwordController.text;
 
-    if (username == "mobileSeru" && password == "mobileSeru") {
+    bool registerResult = await AuthService.register(nama, username, email, password);
+
+    if (registerResult) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const DashboardPage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/layouts/dashboard_layouts.dart';
 import 'package:tugas1_mobile/components/menu_card.dart';
 import 'package:tugas1_mobile/page/hijriyah.dart';
+import 'package:tugas1_mobile/page/profil%20page/profil.dart';
 import 'package:tugas1_mobile/page/summaryPage.dart';
 import 'package:tugas1_mobile/page/first_menu.dart';
 import 'package:tugas1_mobile/page/second_menu.dart';
@@ -76,7 +77,7 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ),
           const StopwatchMenuPage(),
-          const BantuanPage(),
+          const Profil(),
         ],
       ),
       bottomNavigationBar: BottomNavbar(
