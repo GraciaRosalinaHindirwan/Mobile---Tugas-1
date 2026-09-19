@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
-import 'package:tugas1_mobile/page/register.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 import 'package:tugas1_mobile/page/dashboard.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _usernameController = TextEditingController();
-
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _namaController= TextEditingController();
+  final TextEditingController _emailController = TextEditingController(); 
+  final TextEditingController _confirmPasswordController = TextEditingController(); 
 
-  void _loginAction() {
+  void _registerAction() {
+    String nama = _namaController.text; 
+    String email = _emailController.text; 
     String username = _usernameController.text;
     String password = _passwordController.text;
 
@@ -41,6 +43,8 @@ class _LoginPageState extends State<LoginPage> {
   void dispose() {
     _usernameController.dispose();
     _passwordController.dispose();
+    _emailController.dispose(); 
+    _namaController.dispose(); 
     super.dispose();
   }
 
@@ -108,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                         // TITLE
                         Center(
                           child: Text(
-                            'Sign In',
+                            'Sign Up',
                             style: AppTextStyles.poppinsBold.copyWith(
                               fontSize: 20,
                               color: AppColors.secondaryColor,
@@ -131,6 +135,16 @@ class _LoginPageState extends State<LoginPage> {
                         ),
 
                         const SizedBox(height: 25),
+
+                        InputCardComponent(
+                          label: 'Nama', 
+                          hint: '', 
+                          controller: _namaController),
+
+                        InputCardComponent(
+                          label: "Email", 
+                          hint: '', 
+                          controller: _emailController), 
 
                         // USERNAME
                         InputCardComponent(
@@ -157,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 38,
 
                           child: OutlinedButton(
-                            onPressed: _loginAction,
+                            onPressed: _registerAction,
 
                             style: OutlinedButton.styleFrom(
                               side: const BorderSide(
@@ -179,40 +193,6 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-
-                        const SizedBox(height: 12), 
-
-                        // register link
-                        Center(
-                          child: RichText(text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: "belum punya akun? ", 
-                                style: AppTextStyles.jostRegular.copyWith(
-                                  fontSize: 11, 
-                                  color: AppColors.secondaryColor, 
-                                ),
-                              ),
-
-                            TextSpan(
-                              text: "Daftar disini", 
-                              style: AppTextStyles.jostBold.copyWith(
-                                fontSize: 11, 
-                                color: AppColors.secondaryColor, 
-                                decoration: TextDecoration.underline,
-                              ), 
-
-                              recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                  context, 
-                                  MaterialPageRoute(builder: (context) => const RegisterPage())
-                                ); 
-                              }
-                            ),
-                            ]
-                          )),
-                        )
                       ],
                     ),
                   ),
