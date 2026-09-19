@@ -10,7 +10,7 @@ import 'package:tugas1_mobile/page/weton.dart';
 import 'package:tugas1_mobile/components/member_card.dart';
 import 'package:tugas1_mobile/components/bottom_nav.dart';
 import 'package:tugas1_mobile/page/faq.dart';
-// import 'package:tugas1_mobile/page/stopwatc.dart';
+import 'package:tugas1_mobile/page/stopwatch_menu.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -75,7 +75,7 @@ class _DashboardPageState extends State<DashboardPage> {
               ],
             ),
           ),
-          // const StopwatchPage(),
+          const StopwatchMenuPage(),
           const BantuanPage(),
         ],
       ),
