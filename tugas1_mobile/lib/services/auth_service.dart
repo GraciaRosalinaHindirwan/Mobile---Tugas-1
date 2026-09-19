@@ -136,4 +136,39 @@ class AuthService {
 
     return true;
   }
+
+  static Future<bool> deleteAccount() async {
+    final box = await _box;
+
+    // Ambil username yang sedang login
+    final username = box.get('loggedInUsername');
+
+    if (username == null) {
+      return false;
+    }
+
+    // Hapus data user
+    await box.delete(username);
+
+    // Hapus status login
+    await box.delete('loggedInUsername');
+
+    return true;
+  }
+
+  static Future<bool> logout() async {
+    final box = await _box;
+
+    // Ambil username yang sedang login
+    final username = box.get('loggedInUsername');
+
+    if (username == null) {
+      return false;
+    }
+
+    // Hapus status login
+    await box.delete('loggedInUsername');
+
+    return true;
+  }
 }
