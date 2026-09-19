@@ -43,29 +43,13 @@ class _StopwatchMenuPageState extends State<StopwatchMenuPage> {
           child: Column(
             spacing: 24,
             children: [
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Image.asset(
-                      'assets/icons/back.png',
-                      width: 30,
-                      height: 30,
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      'Stopwatch',
-                      textAlign: TextAlign.center,
-                      style: AppTextStyles.poppinsBold.copyWith(
-                        fontSize: 20,
-                        color: AppColors.secondaryColor,
-                      ),
-                    ),
-                  ),
-                ],
+              Text(
+                'Stopwatch',
+                textAlign: TextAlign.center,
+                style: AppTextStyles.poppinsBold.copyWith(
+                  fontSize: 20,
+                  color: AppColors.secondaryColor,
+                ),
               ),
 
               // deskripsi singkat
