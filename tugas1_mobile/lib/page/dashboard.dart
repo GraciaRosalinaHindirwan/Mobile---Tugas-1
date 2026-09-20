@@ -76,7 +76,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
                  MenuCard(
                   title: "Kalender Saka",
-                  icon: "assets/icons/saka.png",
+                  icon: "assets/icons/saka_small.png",
                   page: const Hijriyah(),
                 ),
                 MenuCard(
