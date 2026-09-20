@@ -45,8 +45,8 @@ class BottomNavbar extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 3,
             height: 65,
             child: _NavItem(
-              icon: Icons.timer_outlined,
-              selectedIcon: Icons.timer,
+              icon: Icon(Icons.timer_outlined),
+              selectedIcon: Icon(Icons.timer),
               label: 'Stopwatch',
               isSelected: currentIndex == 1,
               onTap: () => onTap(1),
@@ -59,9 +59,9 @@ class BottomNavbar extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 3,
             height: 65,
             child: _NavItem(
-              icon: Icons.help_outline,
-              selectedIcon: Icons.help,
-              label: 'Bantuan',
+              icon: Icon(Icons.person_outlined), 
+              selectedIcon: Icon(Icons.person),
+              label: 'Profile',
               isSelected: currentIndex == 2,
               onTap: () => onTap(2),
             ),
@@ -129,8 +129,8 @@ class BottomNavbar extends StatelessWidget {
 }
 // NAV ITEM
 class _NavItem extends StatelessWidget {
-  final IconData icon;
-  final IconData selectedIcon;
+  final Widget icon;
+  final Widget selectedIcon;
   final String label;
   final bool isSelected;
   final VoidCallback onTap;
@@ -151,13 +151,8 @@ class _NavItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
-          Icon(
-            isSelected ? selectedIcon : icon,
-            color: AppColors.primaryColor,
-            size: 25,
-          ),
-
+          (isSelected) ? selectedIcon : icon,
+          
           const SizedBox(height: 4),
 
           Text(

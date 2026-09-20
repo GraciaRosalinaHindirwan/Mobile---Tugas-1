@@ -93,32 +93,11 @@ class BantuanPage extends StatelessWidget {
                   'Dashboard. Kemudian pilih tanggal yang ingin '
                   'diperiksa untuk mendapatkan hasil konversinya.',
             ),
-
-            const SizedBox(height: 30),
-            // LOGOUT SECTION
-            Text(
-              'Account',
-              style: AppTextStyles.jostBold.copyWith(
-                fontSize: 14,
-                color: AppColors.secondaryColor,
-              ),
-            ),
-
-            const SizedBox(height: 5),
-
-            Container(
-              height: 1,
-              width: double.infinity,
-              color: AppColors.secondaryColor,
-            ),
-
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
+          ]
+        )
+      )
     );
   }
-
   // FAQ CARD
   Widget _faqCard({required String question, required String answer}) {
     return Container(

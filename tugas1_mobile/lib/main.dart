@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/page/login.dart';
+import 'package:tugas1_mobile/page/profil%20page/profil.dart';
 
 void main() {
   runApp(const MyApp());
