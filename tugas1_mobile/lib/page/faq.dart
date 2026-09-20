@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
-import 'package:tugas1_mobile/page/login.dart';
 
 class BantuanPage extends StatelessWidget {
   const BantuanPage({super.key});
@@ -11,10 +10,7 @@ class BantuanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 24,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -116,81 +112,15 @@ class BantuanPage extends StatelessWidget {
               color: AppColors.secondaryColor,
             ),
 
-            const SizedBox(height: 12),
-            // LOGOUT CARD
-            InkWell(
-              onTap: () {
-                _showLogoutDialog(context);
-              },
-              borderRadius: BorderRadius.circular(16),
-
-              child: Container(
-                width: double.infinity,
-                height: 58,
-
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 14,
-                ),
-
-                decoration: BoxDecoration(
-                  color: AppColors.secondaryColor,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-
-                child: Row(
-                  children: [
-
-                    // Icon
-                    Container(
-                      width: 34,
-                      height: 34,
-
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColors.primaryColor,
-                      ),
-
-                      child: const Icon(
-                        Icons.logout,
-                        size: 18,
-                        color: Colors.red,
-                      ),
-                    ),
-
-                    const SizedBox(width: 14),
-
-                    // Text
-                    Expanded(
-                      child: Text(
-                        'Logout',
-                        style: AppTextStyles.jostBold.copyWith(
-                          fontSize: 15,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ),
-
-                    const Icon(
-                      Icons.arrow_forward_ios,
-                      size: 16,
-                      color: Colors.red,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
             const SizedBox(height: 20),
           ],
         ),
       ),
     );
   }
+
   // FAQ CARD
-  Widget _faqCard({
-    required String question,
-    required String answer,
-  }) {
+  Widget _faqCard({required String question, required String answer}) {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.secondaryColor,
@@ -205,17 +135,9 @@ class BantuanPage extends StatelessWidget {
         ),
 
         child: ExpansionTile(
-          tilePadding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 4,
-          ),
+          tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
 
-          childrenPadding: const EdgeInsets.fromLTRB(
-            16,
-            0,
-            16,
-            16,
-          ),
+          childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
 
           iconColor: AppColors.secondaryColor,
           collapsedIconColor: AppColors.secondaryColor,
@@ -260,76 +182,6 @@ class BantuanPage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-  // LOGOUT DIALOG
-  void _showLogoutDialog(BuildContext context) {
-    showDialog(
-      context: context,
-
-      builder: (context) {
-        return AlertDialog(
-          backgroundColor: AppColors.secondaryColor,
-
-          title: Text(
-            'Logout',
-            style: AppTextStyles.poppinsBold.copyWith(
-              color: AppColors.primaryColor,
-              fontSize: 20,
-            ),
-          ),
-
-          content: Text(
-            'Apakah kamu yakin ingin keluar dari aplikasi?',
-            style: AppTextStyles.jostRegular.copyWith(
-              color: AppColors.primaryColor,
-              fontSize: 14,
-            ),
-          ),
-
-          actions: [
-
-            // BATAL
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-
-              child: Text(
-                'Batal',
-                style: AppTextStyles.jostBold.copyWith(
-                  color: AppColors.primaryColor,
-                ),
-              ),
-            ),
-
-            // LOGOUT
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushAndRemoveUntil(
-                  context,
-
-                  MaterialPageRoute(
-                    builder: (context) => const LoginPage(),
-                  ),
-
-                  (route) => false,
-                );
-              },
-
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryColor,
-                foregroundColor: AppColors.secondaryColor,
-                elevation: 0,
-              ),
-
-              child: const Text(
-                'Logout',
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 }
