@@ -24,13 +24,13 @@ class ResultCard extends StatelessWidget {
         child:
         Column(
           children: [
-            Text(this.title,
+            Text(title,
             textAlign: TextAlign.center, 
             style: AppTextStyles.jostRegular.copyWith(
               fontSize: 20, 
               color: AppColors.textColor,
             )), 
-            Text(this.result, 
+            Text(result, 
             textAlign: TextAlign.center,
             style: AppTextStyles.jostBold.copyWith(
               fontSize: 20, 

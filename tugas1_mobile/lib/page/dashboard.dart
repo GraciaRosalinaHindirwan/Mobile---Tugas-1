@@ -10,8 +10,8 @@ import 'package:tugas1_mobile/page/third_menu.dart';
 import 'package:tugas1_mobile/page/weton.dart';
 import 'package:tugas1_mobile/components/member_card.dart';
 import 'package:tugas1_mobile/components/bottom_nav.dart';
-import 'package:tugas1_mobile/page/faq.dart';
 import 'package:tugas1_mobile/page/stopwatch_menu.dart';
+import 'package:tugas1_mobile/page/age_calculator.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -72,6 +72,11 @@ class _DashboardPageState extends State<DashboardPage> {
                   title: "Kalender Hijriyah",
                   icon: "assets/icons/hijri_smal.png",
                   page: const Hijriyah(),
+                ),
+                  MenuCard(
+                  title: "Tanggal ke Umur",
+                  icon: "assets/icons/age_kecil.png",
+                  page: const AgeCalculatorPage(),
                 ),
               ],
             ),
