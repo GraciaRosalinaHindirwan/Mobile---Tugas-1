@@ -4,7 +4,6 @@ import 'package:tugas1_mobile/page/login.dart';
 import 'package:tugas1_mobile/services/auth_service.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
-import 'package:tugas1_mobile/page/dashboard.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});

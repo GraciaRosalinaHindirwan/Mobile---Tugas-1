@@ -10,8 +10,8 @@ import 'package:tugas1_mobile/page/third_menu.dart';
 import 'package:tugas1_mobile/page/weton.dart';
 import 'package:tugas1_mobile/components/member_card.dart';
 import 'package:tugas1_mobile/components/bottom_nav.dart';
-import 'package:tugas1_mobile/page/faq.dart';
 import 'package:tugas1_mobile/page/stopwatch_menu.dart';
+import 'package:tugas1_mobile/page/age_calculator.dart';
 import 'package:tugas1_mobile/page/saka_page.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -77,7 +77,12 @@ class _DashboardPageState extends State<DashboardPage> {
                  MenuCard(
                   title: "Kalender Saka",
                   icon: "assets/icons/saka.png",
-                  page: const SakaMenuPage(),
+                  page: const Hijriyah(),
+                ),
+                MenuCard(
+                  title: "Tanggal ke Umur",
+                  icon: "assets/icons/age_kecil.png",
+                  page: const AgeCalculatorPage(),
                 ),
               ],
             ),

@@ -4,7 +4,9 @@ import 'package:tugas1_mobile/services/auth_service.dart';
 import 'package:tugas1_mobile/theme/app_colors.dart';
 import 'package:tugas1_mobile/theme/app_text_styles.dart';
 
-class DeleteAccountCard extends StatelessWidget {  
+class DeleteAccountCard extends StatelessWidget {
+  const DeleteAccountCard({super.key});
+  
 
   @override
   Widget build(BuildContext context) {

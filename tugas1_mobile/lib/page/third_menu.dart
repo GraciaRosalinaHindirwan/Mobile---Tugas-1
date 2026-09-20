@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tugas1_mobile/components/input_card.dart';
 import 'package:tugas1_mobile/components/output_card.dart';
 import 'package:tugas1_mobile/layouts/menu_layouts.dart';
-import 'package:tugas1_mobile/theme/app_colors.dart';
-import 'package:tugas1_mobile/theme/app_text_styles.dart';
 import 'package:tugas1_mobile/components/button_submit.dart';
 
 class OddEvenPage extends StatefulWidget {
@@ -19,7 +17,7 @@ class _OddEvenPageState extends State<OddEvenPage> {
   String hasil = '0';
 
   @override
-  void dispose() {
+  void dispose() {  
     controller.dispose();
     super.dispose();
   }
