@@ -109,11 +109,12 @@ class _SakaMenuPageState extends State<SakaMenuPage> {
         _selectedDate = picked;
       });
     }
-  }
+  } 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF013E37),
       body: Container(
         padding: const EdgeInsets.all(32),
         color: AppColors.primaryColor,
